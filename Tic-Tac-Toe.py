@@ -38,9 +38,9 @@ def playerMove():
                     run = False
                     insertLetter('X', move)
                 else:
-                    print('This placce is occupied')
+                    print('This place is occupied')
             else:
-                print('insert correct number range 1-9')
+                print('insert correct number in range 1-9')
         except:
             print('please type a number!')
 
@@ -89,7 +89,7 @@ def isBoardFull(board):
         return True    
 
 def main():
-    print("Wilkommen in tik tak srou")
+    print("Welcome in Tica-tac-toe game!")
     printBoard(board)
 
     while not isBoardFull(board):
@@ -97,21 +97,21 @@ def main():
             playerMove()
             printBoard(board)
         else:
-            print('Sorry, O wygrywa')
+            print('Sorry, O wins')
             break
         if not(isWinner(board, 'X')):
             move = compMove()
             if move == 0:
-                print('Remis!')
+                print('Tie!')
             else:
                 insertLetter('O', move)
                 print('Computer placed \'O\' in position', move, ':')
                 printBoard(board)
         else:
-            print('X wygrywa - Wygrałeś!')
+            print('X wins - you just won!')
             break
     
     if isBoardFull(board):
-        print("Remis!")
+        print("Tie!")
 
 main()
