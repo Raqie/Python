@@ -18,24 +18,24 @@ player = False
 while player == False:
     player = podanyZnak
     if player == computer:
-        print("remis")
+        print("Tie")
     elif player == rock:
         if computer == papper:
-            print("Przegroł żech!", computer, "kryje", player)
+            print("You lost!", computer, "beats", player)
         else:
-            print("Wygrałeś!", player, "kryje", computer)
+            print("You Win!", player, "beats", computer)
     elif player == papper:
         if computer == scissors:
-            print("Przegrałeś", computer, "bije", player)
+            print("Not this time pal", computer, "wins against", player)
         else:
-            print("Wygroł żech bo", player, "tnie", computer)
+            print("Yuppi! U win", player, "wins against", computer)
     elif player == scissors:
         if computer == rock:
-            print("Przegrałeś", computer, "bije", player)
+            print("Sorry buddy", computer, "makes total distruction to ", player)
         else:
-            print("Wygrana", player, "rozpierdala", computer)
+            print("Win", player, "destroys ", computer)
     else:
-        print("Nie ma takiego bicia synek!")
+        print("Finito!")
 
 player = False
 computer = rps[random.randint(0, 2)]
